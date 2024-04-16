@@ -36,4 +36,13 @@ class Quiz {
         return true;
     }
 }
+    filterQuestionsByDifficulty(difficulty) {
+        this.questions = this.questions.filter((element) => {
+            if (difficulty > 0 && difficulty <= 3){
+                return element.difficulty === difficulty;
+            } else {
+                return this.questions;
+            }
+        });
+        }
 }
