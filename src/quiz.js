@@ -45,4 +45,10 @@ class Quiz {
             }
         });
         }
+
+    averageDifficulty() {
+        const totalDifficulty = this.questions.reduce((acc, question) => acc + question.difficulty, 0);
+        return totalDifficulty / this.questions.length
+    }
+    
 }
